@@ -23,7 +23,7 @@ def index():
         username = request.form['username']
         password = request.form['password']
         if username == "admin" and password in passwords:
-            ip = request.remote_addr
+            ip = request.environ['HTTP_X_FORWARDED_FOR']
             # country = gi.country_name_by_addr('8.8.8.8')
             country = gi.country_name_by_addr(ip)
             # audio_controller.hacked(data)
