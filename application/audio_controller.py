@@ -17,8 +17,16 @@ class AudioController(object):
             url = "https://www.youtube.com/watch?v=KnjCA-h44QY"
         elif country == "France":
             url = "https://www.youtube.com/watch?v=5g4fhqCSdLQ"
+        elif country == "China":
+            url = "https://www.youtube.com/watch?v=UctriMuXYS0"
+        elif country == "Sweden":
+            url = "https://www.youtube.com/watch?v=9LiN57nfjFw"
+        elif country == "":
+            url = ""
+        elif country == "":
+            url = ""
         else:
-            url = "https://www.youtube.com/watch?v=5g4fhqCSdLQ"
+            url = "https://www.youtube.com/watch?v=4V9QQePap9Y"
         video = pafy.new(url)
         best = video.getbest()
         return best.url
